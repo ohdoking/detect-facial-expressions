@@ -3,7 +3,6 @@ import threading
 import time
 
 import av
-from PIL import Image, ImageTk
 import numpy as np
 import cv2
 from keras.models import Sequential
@@ -12,6 +11,8 @@ from keras.layers import (Conv2D)
 from keras.layers import (MaxPooling2D)
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
+
+# TODO clean up code
 
 emotion_model = Sequential()
 emotion_model.add(Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(48,48,1)))
